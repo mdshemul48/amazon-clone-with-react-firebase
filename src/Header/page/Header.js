@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 
 // castom components
 import Logo from '../../shared/components/Logo';
+import SearchBox from '../components/SearchBox';
 // castom css module
 import classes from "./Header.module.css"
 function Header() {
@@ -17,6 +18,7 @@ function Header() {
                 <Logo />
             </Link>
             {/* search box  */}
+            <SearchBox />
             {/* 3 links  */}
             {/* basket item with number */}
         </nav >
