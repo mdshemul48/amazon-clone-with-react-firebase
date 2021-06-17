@@ -7,8 +7,8 @@ const NavLinks = (props) => {
 
         <Link to={props.to} className={classes.header_link}>
             <div className={classes.header__option}>
-                <span>{props.firstText}</span>
-                <span>{props.secondText}</span>
+                <span className={classes.header__optionLineOne}>{props.lineOne}</span>
+                <span className={classes.header__optionLineTwo}>{props.LineTwo}</span>
             </div>
         </Link>
 
