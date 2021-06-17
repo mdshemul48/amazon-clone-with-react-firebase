@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // castom components 
 import Header from "./Header/page/Header";
+import Home from "./Home/pages/Home"
 import "./app.css"
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
           </Route>
           <Route path="/">
             <Header />
-            <h1>home page</h1>
+            <Home />
           </Route>
         </Switch>
       </div>
