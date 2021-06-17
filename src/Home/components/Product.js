@@ -1,18 +1,25 @@
 import React from 'react'
 
 // importing context 
-import Basket from '../../Header/components/Basket';
+import useStateValue from "../../context/Basket"
 // castom css
 import classes from "./Product.module.css"
 function Product(props) {
+    const [, dispatch] = useStateValue()
+
     const { id, title, price, rating, image } = props;
 
 
-
     const addToBasketHandler = () => {
-
+        dispatch({
+            type: "ADD_TO_BASKET",
+            item: {
+                id, title, price, rating, image
+            }
+        })
 
     }
+
     return (
         <div className={classes.product}>
             <div className={classes.product_info}>
