@@ -1,0 +1,17 @@
+.header__basket {
+  color: white;
+  text-decoration: none;
+  margin-left: 10px;
+  padding-left: 10px;
+}
+.header__optionBasket {
+  display: flex;
+  align-items: center;
+}
+.header__optionLineTwo {
+  font-weight: 700;
+}
+.headerBasketCount {
+  margin-left: 10px;
+  margin-right: 10px;
+}

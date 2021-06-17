@@ -2,6 +2,7 @@ import React from 'react'
 
 // castom components
 import NavLink from './Navlink'
+import Basket from "./Basket"
 import classes from "./NavElements.module.css"
 const NavElements = () => {
     return (
@@ -10,7 +11,7 @@ const NavElements = () => {
             <NavLink to="/login" lineOne="Hello Sam" LineTwo="Sign In" />
 
             {/* 2nd link */}
-            <NavLink to="/checkout" lineOne="Returns" LineTwo="& Orders" />
+            <NavLink to="/" lineOne="Returns" LineTwo="& Orders" />
 
 
             {/* 3rd link */}
@@ -18,7 +19,7 @@ const NavElements = () => {
 
 
             {/* 4th link */}
-
+            <Basket to="/checkout" />
 
         </div>
     )
