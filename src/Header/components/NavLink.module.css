@@ -6,4 +6,16 @@
 .header__option {
   display: flex;
   flex-direction: column;
+  font-family: sans-serif;
+  font-weight: 500;
+  margin-left: 10px;
+  padding-left: 10px;
+}
+
+.header__optionLineOne {
+  font-size: 10px;
+}
+
+.header__optionLineTwo {
+  font-weight: 700;
 }
