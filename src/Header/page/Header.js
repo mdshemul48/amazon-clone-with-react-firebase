@@ -4,16 +4,19 @@ import React from 'react'
 // Header Component
 // this is the main header of the site.
 
+// castom components
+import Logo from '../../shared/components/Logo';
+// castom css module
+import classes from "./Header.module.css"
 function Header() {
     return (
-        <nav className="header">
+        <nav className={classes.header}>
             {/* logo on the left -> img */}
-            <img className="header__logo" src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="" />
-
+            <Logo />
             {/* search box  */}
             {/* 3 links  */}
             {/* basket item with number */}
-        </nav>
+        </nav >
     )
 }
 
