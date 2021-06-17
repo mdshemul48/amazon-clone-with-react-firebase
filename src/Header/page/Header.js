@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom';
 
 // Header Component
 // this is the main header of the site.
@@ -12,7 +12,10 @@ function Header() {
     return (
         <nav className={classes.header}>
             {/* logo on the left -> img */}
-            <Logo />
+
+            <Link to="/">
+                <Logo />
+            </Link>
             {/* search box  */}
             {/* 3 links  */}
             {/* basket item with number */}
