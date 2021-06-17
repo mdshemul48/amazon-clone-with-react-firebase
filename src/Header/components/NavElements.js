@@ -7,14 +7,14 @@ const NavElements = () => {
     return (
         <div className={classes.header__nav}>
             {/* 1st link */}
-            <NavLink to="/login" firstText="Hello Sam" secondText="Sign In" />
+            <NavLink to="/login" lineOne="Hello Sam" LineTwo="Sign In" />
 
             {/* 2nd link */}
-            <NavLink to="/" firstText="Returns" secondText="& Orders" />
+            <NavLink to="/" lineOne="Returns" LineTwo="& Orders" />
 
 
             {/* 3rd link */}
-            <NavLink to="/" firstText="Your" secondText="Prime" />
+            <NavLink to="/" lineOne="Your" LineTwo="Prime" />
 
 
             {/* 4th link */}
