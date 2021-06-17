@@ -10,7 +10,7 @@ const NavElements = () => {
             <NavLink to="/login" lineOne="Hello Sam" LineTwo="Sign In" />
 
             {/* 2nd link */}
-            <NavLink to="/" lineOne="Returns" LineTwo="& Orders" />
+            <NavLink to="/checkout" lineOne="Returns" LineTwo="& Orders" />
 
 
             {/* 3rd link */}
