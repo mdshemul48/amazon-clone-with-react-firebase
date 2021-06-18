@@ -12,7 +12,6 @@ import userStateValue from "./context/Basket"
 function App() {
   const [{ user }, dispatch] = userStateValue()
   useEffect(() => {
-    console.log("fg")
     auth.onAuthStateChanged((authUser) => {
       if (authUser) {
         // user is logged in...

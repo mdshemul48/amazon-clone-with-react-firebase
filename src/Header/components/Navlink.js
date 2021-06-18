@@ -5,7 +5,7 @@ import classes from "./NavLink.module.css"
 const NavLinks = (props) => {
     return (
 
-        <Link to={props.to} className={classes.header_link}>
+        <Link to={props.to} className={classes.header_link} onClick={props.onClick}>
             <div className={classes.header__option}>
                 <span className={classes.header__optionLineOne}>{props.lineOne}</span>
                 <span className={classes.header__optionLineTwo}>{props.LineTwo}</span>
