@@ -2,7 +2,7 @@ import React from 'react'
 
 
 // castom import
-
+import CheckoutProduct from '../components/CheckoutProduct'
 // importing context 
 import useStateValue from "../../context/Basket"
 
@@ -21,6 +21,12 @@ function Checkout() {
                 </div>) : (
                 <div>
                     <h2 className={classes.checkout__title}>Your Shopping Basket</h2>
+                    {/* list of all the checkout products. */}
+                    {basket.map((item) => {
+                        return <CheckoutProduct key={item.key} title={item.title} rating={item.rating} price={item.price} image={item.image} />
+                    })}
+
+
                 </div>)}
         </div>
     )

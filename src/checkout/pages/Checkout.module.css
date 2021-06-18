@@ -2,3 +2,6 @@
   width: 100%;
   margin-bottom: 10px;
 }
+.checkoutBasket .product__rating {
+  display: flex;
+}
