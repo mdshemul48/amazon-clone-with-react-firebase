@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // castom components 
@@ -7,8 +7,29 @@ import Home from "./Home/pages/Home"
 import Login from "./Login/pages/Login";
 import Checkout from "./checkout/pages/Checkout";
 import "./app.css"
+import { auth } from "./util/firebase";
+import userStateValue from "./context/Basket"
 function App() {
-
+  const [{ user }, dispatch] = userStateValue()
+  useEffect(() => {
+    console.log("fg")
+    auth.onAuthStateChanged((authUser) => {
+      if (authUser) {
+        // user is logged in...
+        dispatch({
+          type: "SET_USER",
+          user: authUser
+        })
+      } else {
+        // user is logged out...
+        dispatch({
+          type: "SET_USER",
+          user: null
+        })
+      }
+    })
+  }, [])
+  console.log("user", user)
   return (
     // setting react router for multiple page.
     <Router>
