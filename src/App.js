@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // castom components 
 import Header from "./Header/page/Header";
 import Home from "./Home/pages/Home"
+import Checkout from "./checkout/pages/Checkout";
 import "./app.css"
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         <Switch>
           <Route path="/checkout">
             <Header />
-            <h1>checkout</h1>
+            <Checkout />
           </Route>
           <Route path="/login">
             <h1>login page</h1>
