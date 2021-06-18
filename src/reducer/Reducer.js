@@ -2,6 +2,14 @@ export const initialState = {
     basket: [{ id: "3434234234", title: "new apple ipad pro max", price: 59, rating: 3, image: "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-pro-12-2020.jpg" }],
 }
 
+
+export const getBasketTotal = (basket) => {
+    return basket?.reduce((amount, item) => {
+        return item.price + amount
+    }, 0)
+
+}
+
 function reducer(state, action) {
     console.log(action)
     switch (action.type) {
