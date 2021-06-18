@@ -9,7 +9,7 @@ function Product(props) {
 
     const { id, title, price, rating, image } = props;
 
-
+    // this will dispatch product to the basket reducer by context.
     const addToBasketHandler = () => {
         dispatch({
             type: "ADD_TO_BASKET",
@@ -30,7 +30,7 @@ function Product(props) {
                 </div>
 
             </div>
-            <img src={image} alt="" />
+            <img src={image} alt={title} />
             <button onClick={addToBasketHandler}>Add to basket</button>
         </div>
     )

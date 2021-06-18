@@ -1,8 +1,17 @@
 import React from 'react'
-
+import useStateValue from '../../context/Basket'
 import classes from "./CheckoutProduct.module.css"
 function CheckoutProduct(props) {
     const { id, title, image, price, rating } = props
+    const [, dispatch] = useStateValue()
+
+    const itemRemoveHandler = () => {
+        dispatch({
+            type: "REMOVE_FROM_BASKET",
+            id
+
+        })
+    }
     return (
         <div className={classes.CheckoutProduct}>
             <img className={classes.checkoutProduct__image} src={image} alt={title} />
@@ -15,7 +24,7 @@ function CheckoutProduct(props) {
                 <div className={classes.checkoutProduct__rating}>
                     {Array(rating).fill().map((_) => <p key={Math.random()}>⭐</p>)}
                 </div>
-                <button>Remove form Basket.</button>
+                <button onClick={itemRemoveHandler}>Remove form Basket.</button>
             </div>
         </div>
     )
